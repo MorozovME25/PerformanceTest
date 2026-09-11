@@ -1,0 +1,22 @@
+Java (моя версия 21)
+Инструкция (на всякий случай, просто как я запускал на Windows):
+task1:
+..\PerformanceTest\src:
+javac task1\Task1.java
+java task1.Task1 5 3 4 2 (или любые другие пары чисел)
+task2:
+..\PerformanceTest\src:
+javac task2\Task2.java
+java task2.Task2 task2\ellipse.txt task2\points.txt
+tast3:
+В задании не указано, как нужно его выполнить, поэтому я сделал его в двух вариантах - свой парсер и подключение
+библиотеки Gson
+..\PerformanceTest:
+javac -cp "lib\gson-2.11.0.jar" -d out src\task3\Task3.java
+java -cp "out;lib\gson-2.11.0.jar" task3.Task3 src\task3\values.json src\task3\tests.json src\task3\report.json custom (ручной парсер)
+java -cp "out;lib\gson-2.11.0.jar" task3.Task3 src\task3\values.json src\task3\tests.json src\task3\report.json gson (работа через библиотеку Gson (папка lib))
+java -cp "out;lib\gson-2.11.0.jar" task3.Task3 src\task3\values.json src\task3\tests.json src\task3\report.json (по умолчанию делает через gson, если его не будет, сделает через custom)
+tast4:
+..\PerformanceTest\src>:
+javac task4\Task4.java
+java task4.Task4 task4\nums1.txt
